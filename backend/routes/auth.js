@@ -4,7 +4,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const db = require('../db');
 const auth = require('../middleware/auth');
-const { v4: uuidv4 } = require('uuid');
+const uuidv4 = () => require('crypto').randomUUID();
 
 // POST /register
 router.post('/register', async (req, res) => {

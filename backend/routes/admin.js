@@ -3,7 +3,7 @@ const router = express.Router();
 const db = require('../db');
 const auth = require('../middleware/auth');
 const roleCheck = require('../middleware/roleCheck');
-const { v4: uuidv4 } = require('uuid');
+const uuidv4 = () => require('crypto').randomUUID();
 
 router.use(auth);
 router.use(roleCheck(['admin']));
