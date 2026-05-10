@@ -1,6 +1,6 @@
 const { pool, createDBIfNotExists } = require('./index');
 const bcrypt = require('bcryptjs');
-const { v4: uuidv4 } = require('uuid');
+const uuidv4 = () => require('crypto').randomUUID();
 
 const createTables = async () => {
   await createDBIfNotExists();
