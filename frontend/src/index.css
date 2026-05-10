@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --color-nestleBlue: #009FDA;
+  --color-nestleRed: #E2001A;
+  --color-nestleBg: #F5F5F5;
+}
+
+:root {
+  --primary: #009FDA;
+  --accent: #E2001A;
+  --bg-color: #F5F5F5;
+}
+
+body {
+  @apply bg-nestleBg text-gray-900 font-sans;
+}
+
+.btn {
+  @apply px-4 py-2 rounded-lg font-semibold transition-all duration-200;
+}
+
+.btn-primary {
+  @apply bg-nestleBlue text-white hover:opacity-90;
+}
+
+.btn-accent {
+  @apply bg-nestleRed text-white hover:opacity-90;
+}
+
+.card {
+  @apply bg-white p-6 rounded-xl shadow-sm border border-gray-100;
+}
+
+.badge {
+  @apply px-2 py-1 rounded-full text-xs font-bold uppercase;
+}
